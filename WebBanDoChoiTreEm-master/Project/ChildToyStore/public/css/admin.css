@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.my-header {
+    background-color: #4C2496;
+    padding: 0 3em;
+}
+
+.my-content {
+    padding: 0 3em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.logo-toy img {
+    width: 70%;
+    display: block;
+}
+
+.btn-search {
+    background-color: #5bd199;
+    color: white;
+}
+
+nav.navbar.navbar-expand-sm.navbar-light.bg-light.nav-content {
+    background-color: transparent!important;
+    padding: 0;
+}
+
+.nav-content ul {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-content ul li {
+    width: 100%;
+    text-align: center;
+}
+
+.navbar-light.nav-content .navbar-nav .nav-link, .danhMuc {
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: 0.1s ease-in;
+}
+
+a.nav-link.trangChu {
+    background-color: #FFBD03;
+}
+
+a.nav-link.taiKhoan {
+    background-color: #FF5505;
+}
+
+a.nav-link.gioHang {
+    background-color: #D01DD8;
+}
+
+a.nav-link.hoTro {
+    background-color: #0992F6;
+}
+
+
+.danhMuc {
+    background: #4a9e1d;
+    height: 100%;
+    text-align: center;
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+ul.listDanhMuc {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding-right: 30px;
+}
+
+ul.listDanhMuc li {
+    list-style: none;
+    background: #417724;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    transition: 0.5s ease-out;
+    cursor: pointer;
+}
+
+ul.listDanhMuc li:hover {
+    background: #304c21;
+}
+
+ul.listDanhMuc li:first-child {
+    border-radius: 0;
+}
+
+ul.listDanhMuc li a {
+    text-decoration: none;
+    color: white;
+}
+
+.themSanPham h4,.quanLyDanhMuc h4 {
+    font-weight: bold;
+    color: #ff5505;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0992f6;
+    margin-bottom: 10px;
+}
+
+.hinhLon,.hinhNho {
+    border-radius: 5px;
+    border: 1px solid #0096ff;
+    overflow: auto;
+    margin-bottom: 10px;
+    height: 270px;
+    width: 270px;
+}
+
+.hinhNho{
+    height: 100px;
+    width: 100px;
+}
+
+.themSanPham button.btn.btn-primary {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 20px;
+}
+
+.quanLyDanhMuc .xuLy {
+    font-size: 1.5em;
+}
+
+.quanLyDanhMuc li.list-group-item {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.quanLyDanhMuc .xuLy .edit {
+    margin-right: 20px;
+}
+
+.quanLyDanhMuc .xuLy .edit:hover,.quanLyDanhMuc .xuLy .delete:hover {
+    color: #d01dd8;
+}
+
+#motAnhNho{
+    float: left;
+    list-style: none;
+    height: 100px;
+    width: 100px;
+}
+
+#listAnhNho{
+    overflow: hidden;
+}
+
+.footer .container-fluid {
+    background: #4c2496;
+    padding: 30px;
+    color: white;
+}
+
+.header-footer {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #e3ffdc;
+}
+
+.footer ul li {
+    list-style: none;
+    line-height: 2em;
+    font-size: 1.1em;
+}
+
+.quanLyDonHang h3 {
+    font-weight: bold;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #d64702;
+    border-bottom: 1px solid #0992f6;
+}
+
+.motHinhNho {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #0096ff;
+    border-radius: 3px;
+    overflow: hidden;
+    float: left;
+    margin: 5px;
+}
+
+.motDonHang {
+    background: #ffbd03;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sanPhamDonHang,.diaChiGiaoHang,.tongDonHang {
+    background: #00000038;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    color: white;
+}

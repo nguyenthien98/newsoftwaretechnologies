@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/trang-mua-hang.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i&amp;subset=vietnamese"
+        rel="stylesheet">
+
+    <script src="/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/fontawesome/js/all.min.js"></script>
+    <script src="/js/trang-mua-hang.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="my-header">
+        <div class="container-fluid">
+            <div class="row">
+                <a href="#" class="col-sm-3 logo-toy"><img src="/images/logo_toy.png" class="img-fluid" alt=""></a>
+                <!-- het logo -->
+                <div class="my-search col-sm-6 m-auto">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-search" type="button"><i
+                                    class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- hết nút tìm kiếm -->
+                <div class="col-sm-3 m-auto">
+                    <div class="dangNhap-DangKy">
+                        <i class="fas fa-user"></i>
+                        <a href=""> <i><%= Account.username%></i></a>
+                        <!-- hết nút đăng nhập đăng ký -->
+                    </div>
+                    <div class="thongTin-GioHang">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div class="soLuong-GH">0</div>
+                        <!-- hết số lượng sản phẩm trong giỏ hàng -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="text-center danhMuc">Danh mục</div>
+                    <ul class="listDanhMuc">
+                        <% for(var i = 0; i< Category.length; i++) {%>
+                        <li class="list-group-item"><a href=""><%= Category[i].name%></a></li>
+                        <% }%>
+                    </ul>
+                </div>
+                <!-- hết danh mục -->
+                <div class="col-sm-8">
+                    <nav class="navbar navbar-expand-sm navbar-light bg-light nav-content h-100">
+                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse h-100" id="collapsibleNavId">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 d-flex align-items-end">
+                                <li class="nav-item">
+                                    <a class="nav-link trangChu"
+                                        href="/logins/<%=Account.username%>/<%=Account.password%>">Trang chủ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link taiKhoan" href="#">Tài khoản</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link gioHang" href="#">Giỏ hàng</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link hoTro" href="#">Hỗ trợ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link khuyenMai" href="#">Khuyến mãi</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hết header -->
+    <div class="my-content">
+        <div class="offset-sm-3  col-sm-8">
+            <div class="duongDan">
+                <a href="">Trang chủ </a>»
+                <a href=""><%= Product.name%></a>
+            </div>
+            <div class="row thongtinsanpham">
+                <div class="col-sm-5 hinhSanPham">
+                    <div class="hinhlon">
+                        <img class="h-100" src="/images/<%= Product.anh%>" alt="">
+                    </div>
+                    <!-- <div class="d-flex align-items-center justify-content-center hinhNho">
+                        <i class="fas fa-angle-left left"></i>
+                        <div class="list-HinhNho">
+                            <div class="motHinhNho">
+                                <img src="images/024-462-vi-do-choi-mo-hinh-pokemon-bang-nhua-24-con-5-cm-600x600.jpg"
+                                    alt="" class="img-fluid">
+                            </div>
+                            <div class="motHinhNho">
+                                <img src="images/024-462-vi-do-choi-mo-hinh-pokemon-bang-nhua-24-con-5-cm-1.jpg" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="motHinhNho">
+                                <img src="images/024-462-vi-do-choi-mo-hinh-pokemon-bang-nhua-24-con-5-cm-3.jpg" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="motHinhNho">
+                                <img src="images/024-462-vi-do-choi-mo-hinh-pokemon-bang-nhua-24-con-5-cm-4.jpg" alt=""
+                                    class="img-fluid">
+                            </div>
+                            <div class="motHinhNho">
+                                <img src="images/024-462-vi-do-choi-mo-hinh-pokemon-bang-nhua-24-con-5-cm2.jpg" alt=""
+                                    class="img-fluid">
+                            </div>
+                        </div>
+                        <i class="fas fa-angle-right right"></i>
+                    </div> -->
+                </div>
+                <!-- hết hình sản phẩm -->
+                <div class="col-sm-7 chiTietSanPham">
+                    <div class="tenSanPham"><%= Product.name%></div>
+                    <!-- <div class="nhaSanXuat">NHÀ SẢN XUẤT: <a href="">ĐỒ CHƠI TRUNG QUỐC</a></div> -->
+                    <div class="maSanPham">MÃ SẢN PHẨM: <a href=""><%= Product._id%></a></div>
+                    <div class="tinhTrang">TÌNH TRẠNG: <span>Còn hàng</span></div>
+                    <div class="gia">GIÁ: <span><%= Product.gia%> VNĐ</span></div>
+                    <div class="soLuong">Số lượng: 
+                        <input class="form-control" type="number" value="<%= Product.soluong%>" id="example-number-input">
+                    </div>
+                    <!-- <button class="col-sm-5 themVaoGio"><i class="fas fa-shopping-cart mr-1"></i>Thêm vào giỏ</button>
+                    <button class="col-sm-5 muaNgay"><i class="far fa-credit-card mr-1"></i> Mua ngay</button> -->
+                </div>
+                <!-- hết chi tiết sản phẩm -->
+            </div>
+            <!-- hết thông tin sản phẩm -->
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active moTa" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+                        role="tab" aria-controls="nav-home" aria-selected="true">Mô Tả</a>
+                    <!-- <a class="nav-item nav-link  huongDanMuaHang" id="nav-profile-tab" data-toggle="tab"
+                        href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Hướng dẫn mua
+                        hàng</a>
+                </div> -->
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <p><%= Product.mota%></p>
+                    <!--<p>Chất liệu : Nhựa.</p>
+                    <p>Xuất Xứ: Trung Quốc.</p>
+                    <p>Bộ sản phẩm gồm 24 con Pokemon khác nhau. Kiểu dáng random tùy theo đợt hàng về.</p>
+                    <p>Kích cỡ: 5 cm.</p>
+                    <p>Trọng lượng sản phẩm: 250 gram</p>
+                    <p>Trọng lượng đóng gói: 500 gram</p> -->
+                </div>
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="header-footer">
+                            Giới thiệu về chúng tôi
+                        </div>
+                        <ul>
+                            <li>
+                                <a href=""> Về chúng tôi</a>
+                            </li>
+                            <li>
+                                <a href="">Chính sách bán hàng</a>
+                            </li>
+                            <li>
+                                <a href="">Hợp tác kinh doanh</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="header-footer">
+                            Thông tin trợ giúp
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="">Tư vấn tiêu dùng</a>
+                            </li>
+                            <li>
+                                <a href=""> Hỗ trợ mua hàng</a>
+                            </li>
+                            <li>
+                                <a href="">Hình thức thanh toán</a>
+                            </li>
+                            <li>
+                                <a href=""> Phương thức vận chuyển</a>
+                            </li>
+                            <li>
+                                <a href=""> Chính sách trả & đổi hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="header-footer">
+                            Thông tin liên hệ
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="">Công ty THHH Toy Store</a>
+                            </li>
+                            <li>
+                                <a href="">1 Võ Văn Ngân, Linh Chiểu, Thủ Đức, Hồ Chí Minh</a>
+                            </li>
+                            <li>
+                                <a href="">Hotline:0345123456</a>
+                            </li>
+                            <li>
+                                <a href=""> www.toystore.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

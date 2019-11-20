@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i&amp;subset=vietnamese"
+        rel="stylesheet">
+
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="fontawesome/js/all.min.js"></script>
+    <script src="js/trang-mua-hang.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="my-header">
+        <div class="container-fluid">
+            <div class="row">
+                <a href="#" class="col-sm-3 logo-toy"><img src="images/logo_toy.png" class="img-fluid" alt=""></a>
+                <!-- het logo -->
+                <div class="my-search col-sm-6 m-auto">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-search" type="button"><i
+                                    class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- hết nút tìm kiếm -->
+                <div class="col-sm-3 m-auto">
+                    <button class="btn btn-primary button-ThemSanPham">Thêm sản phẩm</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="text-center danhMuc">Danh mục</div>
+                    <ul class="listDanhMuc">
+                        <li class="list-group-item"><a href="">Đồ chơi trẻ em</a></li>
+                        <li class="list-group-item"><a href="">Đồ chơi nhập vai</a></li>
+                        <li class="list-group-item"><a href="">Đồ chơi cho bé trai</a></li>
+                        <li class="list-group-item"><a href="">Đồ chơi Cho bé gái</a></li>
+                        <li class="list-group-item"><a href="">Đồ chơi trí tuệ-giáo dục</a></li>
+                        <li class="list-group-item"><a href="">Đồ chơi Nhạc cụ - âm thanh</a></li>
+                        <li class="list-group-item"><a href="">Đồ chơi Thể thao - vận động</a></li>
+                        <li class="list-group-item"><a href="">Đồ chơi mô hình</a></li>
+                    </ul>
+                </div>
+                <!-- hết danh mục -->
+                <div class="col-sm-8">
+                    <nav class="navbar navbar-expand-sm navbar-light bg-light nav-content h-100">
+                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse h-100" id="collapsibleNavId">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 d-flex align-items-end">
+                                <li class="nav-item">
+                                    <a class="nav-link trangChu" href="#">Trang chủ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link taiKhoan" href="#">Quản lý tài khoản</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link gioHang" href="#">Đơn đặt hàng</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link hoTro" href="#">Quản lý danh mục</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hết header -->
+    <div class="my-content">
+        <div class="container-fluid">
+            <div class="offset-sm-3  col-sm-8 list-SanPham">
+                <div class="quanLyDonHang">
+                    <h3>Đơn hàng của tôi</h3>
+                    <div class="motDonHang mb-4" style="overflow: hidden">
+                        <div class="row d-flex justify-content-between px-4">
+                            <div>
+                                <h5><b>Đơn hàng:</b>#216483753765812</h5>
+                            </div>
+                            <div>
+                                <h5><b>Tình trạng:</b>đang xử lý</h5>
+                            </div>
+
+                        </div>
+
+                        <div class="sanPhamDonHang">
+                            <div class="row">
+                                <div class="col-sm-6 text-center">
+                                    <h5> <b>SẢN PHẨM</b></h5>
+                                </div>
+                                <div class="col-sm-2 text-center">
+                                    <h5> <b> SỐ LƯỢNG</b></h5>
+                                </div>
+                                <div class="col-sm-4 text-center">
+                                    <h5> <b>TỔNG</b></h5>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-6 text-center"><b>
+                                        <div class="col-sm-6 text-center">
+                                            <div class="motHinhNho">
+                                                <img src="images/108UNO-825-bo-bai-uno-108-la-bang-giay.jpg"
+                                                    class="img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            bộ bài uno 108 lá bằng giấy
+                                        </div>
+                                    </b></div>
+                                <div class="col-sm-2 text-center"><b> 1</b></div>
+                                <div class="col-sm-4 text-center"><b>15.000 VNĐ</b> </div>
+                            </div>
+                            <!-- hết một sản phẩm -->
+                            <div class="row">
+                                <div class="col-sm-6 text-center"><b>
+                                        <div class="col-sm-6 text-center">
+                                            <div class="motHinhNho">
+                                                <img src="images/108UNO-825-bo-bai-uno-108-la-bang-giay.jpg"
+                                                    class="img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            bộ bài uno 108 lá bằng giấy
+                                        </div>
+                                    </b></div>
+                                <div class="col-sm-2 text-center"><b> 1</b></div>
+                                <div class="col-sm-4 text-center"><b>15.000 VNĐ</b> </div>
+                            </div>
+                            <!-- hết một sản phẩm -->
+                        </div>
+                        <!-- hết thông tin sản phẩm -->
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-sm-5 diaChiGiaoHang">
+                                <h4 class="mb-3"><b>Địa chỉ thanh toán</b> </h4>
+                                <p>Vũ Tấn Đạt</p>
+                                <p>32-34 đường số 12 khu phố 5, Hồ Chí Minh, Quận Thủ Đức, Phường Hiệp Bình Chánh</p>
+                                <p>0345146700</p>
+                            </div>
+                            <div class="col-sm-5 tongDonHang">
+                                <div class="row d-flex justify-content-between">
+                                    <p>Tổng sản phẩm</p>
+                                    <p>30.000 VNĐ</p>
+                                </div>
+                                <div class="row d-flex justify-content-between">
+                                    <p>Phí vận chuyển</p>
+                                    <p>30.000 VNĐ</p>
+                                </div>
+                                <div class="row d-flex justify-content-between">
+                                    <p>Mã giảm giá</p>
+                                    <p>30.000 VNĐ</p>
+                                </div>
+                                <hr>
+                                <div class="row d-flex justify-content-between">
+                                    <h4><b>TỔNG</b></h4>
+                                    <p>90.000 VNĐ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary float-right m-3"><b>Xác nhận đơn hàng</b> </button>
+                        <button class="btn btn-danger float-right m-3"><b>Hủy đơn hàng</b> </button>
+                    </div>
+                    <!-- hết một đơn hàng -->
+
+                    <div class="motDonHang mb-4" style="overflow: hidden">
+                        <div class="row d-flex justify-content-between px-4">
+                            <div>
+                                <h5><b>Đơn hàng:</b>#216483753765812</h5>
+                            </div>
+                            <div>
+                                <h5><b>Tình trạng:</b>đang xử lý</h5>
+                            </div>
+
+                        </div>
+
+                        <div class="sanPhamDonHang">
+                            <div class="row">
+                                <div class="col-sm-6 text-center">
+                                    <h5> <b>SẢN PHẨM</b></h5>
+                                </div>
+                                <div class="col-sm-2 text-center">
+                                    <h5> <b> SỐ LƯỢNG</b></h5>
+                                </div>
+                                <div class="col-sm-4 text-center">
+                                    <h5> <b>TỔNG</b></h5>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-6 text-center"><b>
+                                        <div class="col-sm-6 text-center">
+                                            <div class="motHinhNho">
+                                                <img src="images/108UNO-825-bo-bai-uno-108-la-bang-giay.jpg"
+                                                    class="img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            bộ bài uno 108 lá bằng giấy
+                                        </div>
+                                    </b></div>
+                                <div class="col-sm-2 text-center"><b> 1</b></div>
+                                <div class="col-sm-4 text-center"><b>15.000 VNĐ</b> </div>
+                            </div>
+                            <!-- hết một sản phẩm -->
+                            <div class="row">
+                                <div class="col-sm-6 text-center"><b>
+                                        <div class="col-sm-6 text-center">
+                                            <div class="motHinhNho">
+                                                <img src="images/108UNO-825-bo-bai-uno-108-la-bang-giay.jpg"
+                                                    class="img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            bộ bài uno 108 lá bằng giấy
+                                        </div>
+                                    </b></div>
+                                <div class="col-sm-2 text-center"><b> 1</b></div>
+                                <div class="col-sm-4 text-center"><b>15.000 VNĐ</b> </div>
+                            </div>
+                            <!-- hết một sản phẩm -->
+                        </div>
+                        <!-- hết thông tin sản phẩm -->
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-sm-5 diaChiGiaoHang">
+                                <h4 class="mb-3"><b>Địa chỉ thanh toán</b> </h4>
+                                <p>Vũ Tấn Đạt</p>
+                                <p>32-34 đường số 12 khu phố 5, Hồ Chí Minh, Quận Thủ Đức, Phường Hiệp Bình Chánh</p>
+                                <p>0345146700</p>
+                            </div>
+                            <div class="col-sm-5 tongDonHang">
+                                <div class="row d-flex justify-content-between">
+                                    <p>Tổng sản phẩm</p>
+                                    <p>30.000 VNĐ</p>
+                                </div>
+                                <div class="row d-flex justify-content-between">
+                                    <p>Phí vận chuyển</p>
+                                    <p>30.000 VNĐ</p>
+                                </div>
+                                <div class="row d-flex justify-content-between">
+                                    <p>Mã giảm giá</p>
+                                    <p>30.000 VNĐ</p>
+                                </div>
+                                <hr>
+                                <div class="row d-flex justify-content-between">
+                                    <h4><b>TỔNG</b></h4>
+                                    <p>90.000 VNĐ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary float-right m-3"><b>Xác nhận đơn hàng</b> </button>
+                        <button class="btn btn-danger float-right m-3"><b>Hủy đơn hàng</b> </button>
+                    </div>
+                    <!-- hết một đơn hàng -->
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="header-footer">
+                            Giới thiệu về chúng tôi
+                        </div>
+                        <ul>
+                            <li>
+                                <a href=""> Về chúng tôi</a>
+                            </li>
+                            <li>
+                                <a href="">Chính sách bán hàng</a>
+                            </li>
+                            <li>
+                                <a href="">Hợp tác kinh doanh</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="header-footer">
+                            Thông tin trợ giúp
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="">Tư vấn tiêu dùng</a>
+                            </li>
+                            <li>
+                                <a href=""> Hỗ trợ mua hàng</a>
+                            </li>
+                            <li>
+                                <a href="">Hình thức thanh toán</a>
+                            </li>
+                            <li>
+                                <a href=""> Phương thức vận chuyển</a>
+                            </li>
+                            <li>
+                                <a href=""> Chính sách trả & đổi hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="header-footer">
+                            Thông tin liên hệ
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="">Công ty THHH Toy Store</a>
+                            </li>
+                            <li>
+                                <a href="">1 Võ Văn Ngân, Linh Chiểu, Thủ Đức, Hồ Chí Minh</a>
+                            </li>
+                            <li>
+                                <a href="">Hotline:0345123456</a>
+                            </li>
+                            <li>
+                                <a href=""> www.toystore.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

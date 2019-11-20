@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/trang-mua-hang.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i&amp;subset=vietnamese"
+        rel="stylesheet">
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/fontawesome/js/all.min.js"></script>
+    <script src="/js/trang-mua-hang.js"></script>
+    <script src="/https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="my-header">
+        <div class="container-fluid">
+            <div class="row">
+                <a href="#" class="col-sm-3 logo-toy"><img src="/images/logo_toy.png" class="img-fluid" alt=""></a>
+                <!-- het logo -->
+                <div class="my-search col-sm-6 m-auto">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-search" type="button"><i
+                                    class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- hết nút tìm kiếm -->
+                <div class="col-sm-3 m-auto">
+                    <div class="dangNhap-DangKy">
+                        <i class="fas fa-user"></i>
+                        <a href=""> <i><%=Account.username%></i></a>/<a href="/logins"> <i>Đăng xuất</i></a>
+                        <!-- hết nút đăng nhập đăng ký -->
+                    </div>
+                    <div class="thongTin-GioHang">
+                        <i class="fas fa-shopping-cart"></i>
+                        <div class="soLuong-GH">0</div>
+                        <!-- hết số lượng sản phẩm trong giỏ hàng -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="text-center danhMuc">Danh mục</div>
+                    <ul class="listDanhMuc">
+                        <% for(var i =0; i< Category.length; i++) {%>
+                        <li class="list-group-item"><a href=""><%=Category[i].name%></a></li>
+                        <% }%>
+                    </ul>
+                </div>
+                <!-- hết danh mục -->
+                <div class="col-sm-8">
+                    <nav class="navbar navbar-expand-sm navbar-light bg-light nav-content h-100">
+                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse h-100" id="collapsibleNavId">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 d-flex align-items-end">
+                                <li class="nav-item">
+                                    <a class="nav-link trangChu" onclick="window.location='/logins/<%=Account.username%>/<%=Account.password%>'">Trang chủ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link taiKhoan" href="#">Tài khoản</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link gioHang" onclick="window.location='/carts/<%=Account._id%>'">Giỏ hàng</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link hoTro" href="#">Hỗ trợ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link khuyenMai" href="#">Khuyến mãi</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hết header -->
+    <div class="my-content">
+        <div class="offset-sm-3  col-sm-8 list-SanPham">
+            <div class="noiDungGioHang">
+                <h3>Quản lý tài khoản</h3>
+                <div class="row d-flex justify-content-between">
+                    <div class="col-sm-5 thongTinCaNhan">
+                        <div class="row">
+                            <h4><b>Thông tin cá nhân</b> </h4>
+                            <a href="/creatUsers/getUser/<%=Account._id%>" class="chinhSua">Chỉnh sửa</a>
+                        </div>
+                        <div class="ten"><b>Tên:</b><%= User.ten%></div>
+                        <div class="gioiTinh"><b>Giới tính:</b><%= User.gioitinh%></div>
+                        <div class="email"><b>Email:</b> <%= Account.email%> </div>
+                        <div class="ngaySinh"><b>Ngày sinh:</b> <%= User.ngaysinh%></div>
+                    </div>
+                    <div class="col-sm-5 thongTinDiaChi">
+                        <div class="row">
+                            <h4><b> Địa chỉ</b></h4>
+                            <a href="/creatUsers/getUser/<%=Account._id%>" class="chinhSua">Chỉnh sửa</a>
+                        </div>
+                        <div class="diaChi"><b>Địa chỉ:</b> <%= User.diachi%> </div>
+                        <div class="soDienThoai"><b>Số điện thoại:</b> (+84) <%= User.dienthoai%></div>
+                    </div>
+                </div>
+                <div class="col-sm-12 listDonHang my-5">
+                    <h4><b>Danh sách đơn đặt hàng</b></h4>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Đơn hàng số #</th>
+                                <th scope="col">Ngày đặt hàng</th>
+                                <th scope="col">Sản phẩm</th>
+                                <th scope="col">Tổng cộng</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">216483753765812</th>
+                                <td>03/03/2019</td>
+                                <td>abc</td>
+                                <td>338.097 ₫</td>
+                                <td><a href="">Quản lý</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">216481592265812</th>
+                                <td>03/03/2019</td>
+                                <td>Thornton</td>
+                                <td>408.500 ₫</td>
+                                <td><a href="">Quản lý</a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">213075610665812</th>
+                                <td>03/01/2019</td>
+                                <td>
+                                    <ul>
+                                        <li style="list-style: none;">xyz</li>
+                                        <li style="list-style: none;">wffgh</li>
+                                    </ul>
+                                </td>
+                                <td>300.000 ₫</td>
+                                <td><a href="" style="text-decoration: none">Quản lý</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button class="btn btn-warning" style="position: absolute;top:20px;right:0" onclick="window.location='/doimatkhau/<%=Account._id%>'" ><b>Đổi mật khẩu</b> </button>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="header-footer">
+                            Giới thiệu về chúng tôi
+                        </div>
+                        <ul>
+                            <li>
+                                <a href=""> Về chúng tôi</a>
+                            </li>
+                            <li>
+                                <a href="">Chính sách bán hàng</a>
+                            </li>
+                            <li>
+                                <a href="">Hợp tác kinh doanh</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="header-footer">
+                            Thông tin trợ giúp
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="">Tư vấn tiêu dùng</a>
+                            </li>
+                            <li>
+                                <a href=""> Hỗ trợ mua hàng</a>
+                            </li>
+                            <li>
+                                <a href="">Hình thức thanh toán</a>
+                            </li>
+                            <li>
+                                <a href=""> Phương thức vận chuyển</a>
+                            </li>
+                            <li>
+                                <a href=""> Chính sách trả & đổi hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="header-footer">
+                            Thông tin liên hệ
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="">Công ty THHH Toy Store</a>
+                            </li>
+                            <li>
+                                <a href="">1 Võ Văn Ngân, Linh Chiểu, Thủ Đức, Hồ Chí Minh</a>
+                            </li>
+                            <li>
+                                <a href="">Hotline:0345123456</a>
+                            </li>
+                            <li>
+                                <a href=""> www.toystore.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

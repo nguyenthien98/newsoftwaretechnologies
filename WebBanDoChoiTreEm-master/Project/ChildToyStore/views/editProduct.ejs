@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i&amp;subset=vietnamese"
+        rel="stylesheet">
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="fontawesome/js/all.min.js"></script>
+    <script src="/js/trang-mua-hang.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="my-header">
+        <div class="container-fluid">
+            <div class="row">
+                <a href="#" class="col-sm-3 logo-toy"><img src="/images/logo_toy.png" class="img-fluid" alt=""></a>
+                <!-- het logo -->
+                <div class="my-search col-sm-6 m-auto">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Tìm kiếm sản phẩm"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-search" type="button"><i
+                                    class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- hết nút tìm kiếm -->
+                <div class="col-sm-3 m-auto">
+                    <button class="btn btn-primary button-ThemSanPham">Thêm sản phẩm</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="text-center danhMuc">Danh mục</div>
+                    <ul class="listDanhMuc">
+                        <% for(var i = 0; i < Category.length; i ++) {%>
+                        <li class="list-group-item"><a href=""><%= Category[i].name%></a></li>
+                        <%  }%>
+                    </ul>
+                </div>
+                <!-- hết danh mục -->
+                <div class="col-sm-8">
+                    <nav class="navbar navbar-expand-sm navbar-light bg-light nav-content h-100">
+                        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse h-100" id="collapsibleNavId">
+                            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 d-flex align-items-end">
+                                <li class="nav-item">
+                                    <a class="nav-link trangChu" href="#">Trang chủ</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link taiKhoan" href="#">Quản lý tài khoản</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link gioHang" href="#">Đơn đặt hàng</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link hoTro" href="#">Quản lý danh mục</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hết header -->
+    <form method="POST" action="/editProducts/editProd">
+        <div class="my-content">
+            <div class="offset-sm-3  col-sm-8">
+                <div class="themSanPham">
+                    <h4>Sửa sản phẩm</h4>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">Tên sản phẩm</label>
+                        <div class="col-10">
+                            <input type="hidden" name="id" value="<%= id %>">
+                            <input class="form-control" type="text" placeholder="Tên sản phẩm" name="name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-4 col-form-label">Số lượng</label>
+                        <div class="col-3">
+                            <input class="form-control" type="number" placeholder="" name="soluong">
+                        </div>
+                        <label for="example-text-input" class="col-2 col-form-label">Sản phẩm</label>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">Giá sản phẩm</label>
+                        <div class="col-10">
+                            <input class="form-control" type="number" placeholder="100000" name="gia">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">Ngày sản xuất</label>
+                        <div class="col-10">
+                            <input class="form-control" type="text" placeholder="dd/mm/yy" name="ngaysx">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-4 col-form-label">Thời gian bảo hành</label>
+                        <div class="col-3">
+                            <input class="form-control" type="number" placeholder="12" name="baohanh">
+                        </div>
+                        <label for="example-text-input" class="col-2 col-form-label">Tháng</label>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">Nội dung sản phẩm</label>
+                        <div class="col-10">
+                            <textarea class="form-control" id="exampleTextarea" rows="3" name="mota"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="example-text-input" class="col-2 col-form-label">hình ảnh</label>
+                        <div class="col-4">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile" accept="/image/*"
+                                    onchange="readURL(this)" name="anh">
+                                <label class="custom-file-label" for="customFile" id="tenHinh">Choose file</label>
+                            </div>
+                        </div>
+                        <!-- <input type="text" name="anh" placeholder="ten file anh"> -->
+                        <div class="col-4 hinhLon"><img src="/https://via.placeholder.com/270" id="blah"
+                                class="h-100 w-100" alt=""></div>
+                    </div>
+                    <select name="cate_id" id="">
+                        <% for(var i = 0; i < Category.length; i ++) {%>
+                        <option value="<%= Category[i]._id %>"><%= Category[i].name %></option>
+                        <%  }%>
+                    </select>
+                    <div class="text-center">
+                        <button class="btn btn-primary" type="submit">Hoàn thành sửa sản phẩm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="header-footer">
+                            Giới thiệu về chúng tôi
+                        </div>
+                        <ul>
+                            <li>
+                                <a href=""> Về chúng tôi</a>
+                            </li>
+                            <li>
+                                <a href="">Chính sách bán hàng</a>
+                            </li>
+                            <li>
+                                <a href="">Hợp tác kinh doanh</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="header-footer">
+                            Thông tin trợ giúp
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="">Tư vấn tiêu dùng</a>
+                            </li>
+                            <li>
+                                <a href=""> Hỗ trợ mua hàng</a>
+                            </li>
+                            <li>
+                                <a href="">Hình thức thanh toán</a>
+                            </li>
+                            <li>
+                                <a href=""> Phương thức vận chuyển</a>
+                            </li>
+                            <li>
+                                <a href=""> Chính sách trả & đổi hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="header-footer">
+                            Thông tin liên hệ
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="">Công ty THHH Toy Store</a>
+                            </li>
+                            <li>
+                                <a href="">1 Võ Văn Ngân, Linh Chiểu, Thủ Đức, Hồ Chí Minh</a>
+                            </li>
+                            <li>
+                                <a href="">Hotline:0345123456</a>
+                            </li>
+                            <li>
+                                <a href=""> www.toystore.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
+</html>

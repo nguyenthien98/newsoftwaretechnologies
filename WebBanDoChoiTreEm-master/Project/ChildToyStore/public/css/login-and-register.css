@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+.shape {
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    height: 100%;
+    animation: Gradient 15s ease infinite;
+    position: relative;
+}
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.title-form {
+    font-family: 'Sigmar One', cursive;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #065162;
+}
+
+.register, .login {
+    width: 100%;
+    padding: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    background: white;
+    height: 600px;
+}
+
+.hienForm {
+    animation: hieuUngHien 1s forwards;
+}
+
+@-webkit-keyframes hieuUngHien {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-20px, 20px);
+    }
+}
+
+.anForm {
+    animation: hieuUngAn 1s forwards;
+}
+
+@-webkit-keyframes hieuUngAn {
+    50% {
+        transform: translate(-20px, 20px);
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translate(-20px, 20px);
+    }
+}
+
+.form-group .input-icon {
+    position: relative;
+}
+
+.input-icon i {
+    position: absolute;
+    font-size: 1.4rem;
+    top: 3px;
+    left: 5px;
+    color: #9e9d9d;
+}
+
+.input-icon input.form-control {
+    padding-left: 2em;
+}
+
+.duong-cong {
+    background: url("../images/duongcong.png");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.logo {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    width: 30%;
+    animation: animation-logo 2s ease-in-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+@-webkit-keyframes animation-logo {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.anh-nen {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    width: 75%;
+    animation: animation-anhNen 1s ease-out forwards;
+    transform-origin: 50% 90%;
+}
+
+@-webkit-keyframes animation-anhNen {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.login-Account small {
+    font-size: .9rem;
+    font-weight: 600;
+    color: #7e90a4;
+}
+
+.login-Account a {
+    text-decoration: none !important;
+    color: #5dacfa;
+    transition: .2s;
+    font-weight: bold;
+}
+
+.login-Account a:hover {
+    color: #0d67c7;
+}
+
+input.form-check-input.filter {
+    opacity: 0;
+}
+
+.filter+label::before {
+    content: '';
+    margin-top: -2px;
+    margin-left: -20px;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background: #E3EDF9;
+    transition: .2s all ease-in-out;
+}
+
+.filter:checked+label::before {
+    background: #23a7d4;
+    text-align: center;
+}
+
+.filter:checked+label::after {
+    font-family: "Material Design Icons";
+    color: #FFFFFF;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    font-size: 14px;
+    content: "\2713";
+}
+
+.filter+label {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.form-check-label+a.float-right {
+    text-decoration: none;
+}

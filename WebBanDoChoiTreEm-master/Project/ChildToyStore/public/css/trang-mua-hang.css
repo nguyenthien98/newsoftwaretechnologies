@@ -1,0 +1,483 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.my-header {
+    background-color: #4C2496;
+    padding: 0 3em;
+}
+
+.my-content {
+    padding: 0 3em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.logo-toy img {
+    width: 70%;
+    display: block;
+}
+
+.btn-search {
+    background-color: #5bd199;
+    color: white;
+}
+
+.dangNhap-DangKy, .dangNhap-DangKy a {
+    color: white;
+    font-size: 1em;
+}
+
+.thongTin-GioHang {
+    color: white;
+    font-size: 1.5em;
+}
+
+.thongTin-GioHang .soLuong-GH {
+    background: url("../images/number-shop.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    padding-left: 1em;
+    font-size: 1em;
+    width: 2em;
+    height: 2em;
+}
+
+nav.navbar.navbar-expand-sm.navbar-light.bg-light.nav-content {
+    background-color: transparent!important;
+    padding: 0;
+}
+
+.nav-content ul {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-content ul li {
+    width: 100%;
+    text-align: center;
+}
+
+.navbar-light.nav-content .navbar-nav .nav-link, .danhMuc {
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    transition: 0.1s ease-in;
+}
+
+a.nav-link.trangChu {
+    background-color: #FFBD03;
+}
+
+a.nav-link.taiKhoan {
+    background-color: #FF5505;
+}
+
+a.nav-link.gioHang {
+    background-color: #D01DD8;
+}
+
+a.nav-link.hoTro {
+    background-color: #0992F6;
+}
+
+a.nav-link.khuyenMai {
+    background-color: #5BC124;
+}
+
+.current {
+    padding-top: 1em;
+}
+
+.danhMuc {
+    background: #4a9e1d;
+    height: 100%;
+    text-align: center;
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+ul.listDanhMuc {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding-right: 30px;
+}
+
+ul.listDanhMuc li {
+    list-style: none;
+    background: #417724;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    transition: 0.5s ease-out;
+    cursor: pointer;
+}
+
+ul.listDanhMuc li:hover {
+    background: #304c21;
+}
+
+ul.listDanhMuc li:first-child {
+    border-radius: 0;
+}
+
+ul.listDanhMuc li a {
+    text-decoration: none;
+    color: white;
+}
+
+.offset-sm-3.col-sm-8.quangCao {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.quangCao .carousel {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.motSanPham img.card-img-top {
+    margin-top: 10px;
+}
+
+.motSanPham h4.card-title {
+    font-size: 2em;
+    color: #1792ae;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+.motSanPham a {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: #6b1313;
+}
+
+.motSanPham .btn-group {
+    margin: 10px auto;
+}
+
+.card.motSanPham {
+    text-align: center;
+}
+
+.motSanPham .btn-GioHang {
+    font-size: 1em;
+    color: white;
+    background: #FF5400;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    border: none;
+}
+
+.motSanPham .btn-IconGioHang {
+    background: #FFC000;
+    border: none;
+}
+
+.motSanPham .btn-group:hover .btn-GioHang {
+    background: #5BC124;
+}
+
+.motSanPham .btn-group:hover .btn-IconGioHang {
+    background: #0096FF;
+}
+
+.duongDan {
+    background: #0096FF;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.duongDan a {
+    color: white;
+}
+
+.hinhlon {
+    border-radius: 5px;
+    border: 1px solid #0096ff;
+    overflow: auto;
+    margin-bottom: 10px;
+    height: 270px;
+}
+
+.hinhSanPham {
+    padding: 10px;
+}
+
+.motHinhNho {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 1px solid #0096ff;
+    border-radius: 3px;
+    overflow: hidden;
+    float: left;
+    margin: 5px;
+}
+
+.list-HinhNho {
+    width: 240px;
+    overflow: hidden;
+    height: 80px;
+    display: inline-block;
+    position: relative;
+}
+
+.hinhNho .left, .hinhNho .right {
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.hinhNho .left:hover, .hinhNho .right:hover {
+    color: #ff5505;
+}
+
+.chiTietSanPham {
+    padding: 10px;
+    font-weight: bold;
+}
+
+.tenSanPham {
+    font-size: 1.2em;
+    border-bottom: 1px solid #0096ff;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.nhaSanXuat, .maSanPham, .tinhTrang {
+    line-height: 2em;
+}
+
+.tinhTrang span {
+    background: #39c1a2;
+    padding: 0px 10px;
+    display: inline-block;
+}
+
+.tinhTrang {
+    border-bottom: 1px solid #0096ff;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.gia span {
+    font-size: 3em;
+    color: #4c2496;
+}
+
+.gia {
+    border-bottom: 1px solid #0096ff;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.soLuong input#example-number-input {
+    display: inline-block;
+}
+
+.chiTietSanPham button.themVaoGio, .chiTietSanPham button.muaNgay {
+    margin: 10px;
+    padding: 10px;
+    background: #ff5505;
+    border: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    border-radius: 10px;
+}
+
+.moTa, .huongDanMuaHang {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.noiDungGioHang h3 {
+    font-weight: bold;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #d64702;
+    border-bottom: 1px solid #0992f6;
+}
+
+.sanPhamGioHang .row {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ff5505;
+    position: relative;
+}
+
+.sanPhamGioHang {
+    font-size: 1.2em;
+}
+
+.thongTinSanPham {
+    display: inline-block;
+    transition: .5s;
+}
+
+.xoaSanPham {
+    display: inline-block;
+    padding-left: 10px;
+    transition: .5s;
+}
+
+.buttonSanPham {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1.3em;
+    color: #3b3232;
+}
+
+.thongTinSanPham:hover, .xoaSanPham:hover {
+    color: #ff5505;
+}
+
+.thanhTien span {
+    font-size: 2em;
+    font-weight: bold;
+    color: #0992f6;
+}
+
+.thanhTien, .maGiamGia {
+    color: #4c2496;
+    font-weight: bold;
+}
+
+button.tiepTucMuaHang, button.thanhToan {
+    border: none;
+    background: #ff5505;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    cursor: pointer;
+}
+
+.noiDungThanhToan h3 {
+    font-weight: bold;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #0992f6;
+    color: #d64702;
+}
+
+.chiTietThanhToan h5, .chiTietGiaoHang h5, .phuongThucThanhToan h5, .phanHoi h5, .xacNhanDonHang h5 {
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #0c0c0c;
+    margin-bottom: 10px;
+}
+
+.chiTietGiaoHang b, .phuongThucThanhToan b, .phanHoi b {
+    color: gray;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.chiTietGiaoHang {
+    font-weight: bold;
+}
+
+.phuongThucThanhToan {
+    line-height: 2em;
+    font-weight: bold;
+}
+
+.xacNhanDonHang li.list-group-item:first-child {
+    background: gray;
+    font-weight: bold;
+}
+
+.tongTien {
+    margin: 20px;
+    font-weight: bold;
+}
+
+.tongTien span {
+    font-size: 2em;
+    color: #0992f6;
+}
+
+.btn-XacNhanDonHang {
+    border: none;
+    background: #ff5505;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.ul-list-hinhNho {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200%;
+}
+
+.footer .container-fluid {
+    background: #4c2496;
+    padding: 30px;
+    color: white;
+}
+
+.header-footer {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #e3ffdc;
+}
+
+.footer ul li {
+    list-style: none;
+    line-height: 2em;
+    font-size: 1.1em;
+}
+
+.motSanPham strike {
+    color: #df0303;
+    font-weight: bold;
+}
+
+.thongTinCaNhan, .thongTinDiaChi,.editTaiKhoan {
+    padding: 65px;
+    background: #8b553c69;
+    box-shadow: 10px 10px 20px;
+}
+
+a.chinhSua {
+    text-decoration: none;
+    padding-top: 4px;
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 3px solid #24a7c1;
+    height: 26px;
+}
+
+.listDonHang {
+    background: #8b553c69;
+    box-shadow: 10px 10px 20px;
+    padding: 20px;
+}
+
+.motDonHang {
+    background: #4fb39c;
+    padding: 20px;
+}
